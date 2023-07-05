@@ -1,0 +1,131 @@
+/* Toggler */
+
+.navBarToggler {
+    width: 60px;
+  height: 40px;
+    position: relative;
+    display: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .navBarToggler span {
+    background: var(--Black);
+    border-radius: 9px;
+    width: 30px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    margin-left: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  span.line-1 {
+    transform: translate(0, -10px);
+  }
+  
+  .navBarToggler .line-3 {
+    transform: translate(0, 10px);
+  }
+  
+  .openMenu .line-1 {
+    transform: translate(0, 0) rotate(45deg);
+  }
+  
+  .openMenu .line-2 {
+    opacity: 0;
+  }
+  
+  .openMenu .line-3 {
+    transform: translate(0, 0) rotate(-45deg);
+  }
+  
+  
+  @media (max-width: 797px){
+    .top {
+      background-color: var(--Dark-Blue);
+      position: fixed;
+      top: 64px !important;
+      left: -100%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      padding: 40px;
+      transition: all 1s ease;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      z-index: 3;
+      /* display: none; */
+    }
+    
+    .animate {
+      left: 0 !important;
+    }
+    
+    .top li {
+      list-style: none;
+      margin: auto;
+    }
+    .top a {
+      text-decoration: none;
+      display: block;
+      margin-bottom: 25px;
+      color: var(--White);
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 0.7rem 0;
+    }
+    .top a:hover {
+      color: var(--Lime-Green);
+      font-size: 1.4rem;
+      transition: 0.9s ease all;
+      border-bottom: none;
+    }
+    .top a:active {
+      border-bottom: none;
+    }
+    /* newNavBar */
+  nav {
+    position: fixed !important;
+    padding: 1.5rem .1rem !important;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    position: relative;
+    margin-bottom: 0;
+    justify-content: space-between;
+  }
+.logo{
+    padding-left: 1rem;
+}
+  .navbar-nav {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    /* display: none; */
+    transition: all 0.5s ease;
+    left: 0;
+    top: -2rem;
+    right: 0;
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+    text-align: center;
+    place-items: center;
+    margin-block: 5rem;
+    padding: 6rem 0;
+  }
+  .nav-items a{
+
+  }
+  .navBarToggler {
+    display: block;
+  }
+
+  .nav-b {
+    display: none;
+  }
+}
