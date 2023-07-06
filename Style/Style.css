@@ -231,16 +231,12 @@ nav {
   padding: 1rem;
 }
 .sect-2-head{
-  width: 12rem;
-  display: flex;
-  color: var(--Dark-Blue);
   font-size: 1.5rem;
-  line-height: 3rem;
 }
 .sect-2-head h2{
-  justify-content: flex-start !important;
-  width: 12rem;
-  display: flex;
+  color: var(--Dark-Blue);
+  line-height: 3rem;
+  text-align: center;
 }
 .sect-2-text-head{
   font-size: 1.3rem;
