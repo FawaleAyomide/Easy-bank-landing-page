@@ -2,7 +2,7 @@
 
 .navBarToggler {
     width: 60px;
-  height: 40px;
+    height: 40px;
     position: relative;
     display: none;
     color: black;
@@ -103,13 +103,8 @@
 }
   .navbar-nav {
     display: flex;
-    position: absolute;
     flex-direction: column;
-    /* display: none; */
     transition: all 0.5s ease;
-    left: 0;
-    top: -2rem;
-    right: 0;
     width: 100%;
     margin: auto;
     height: 100vh;
@@ -118,11 +113,11 @@
     margin-block: 5rem;
     padding: 6rem 0;
   }
-  .nav-items a{
-
-  }
   .navBarToggler {
     display: block;
+    position: absolute;
+    top: .6rem;
+    right: 0;
   }
 
   .nav-b {
