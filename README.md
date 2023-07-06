@@ -11,7 +11,6 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 - [Author](#author)
 
 ### Screenshot
-
 ![](./images/Screenshot%202023-07-06%20at%2016-15-54%20Frontend%20Mentor%20Easybank%20landing%20page.png)
 
 ### Links
