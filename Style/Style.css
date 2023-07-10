@@ -91,7 +91,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  flex: 3 !important;
+  flex: 1 !important;
 }
 .main-head {
   width: 20rem;
@@ -112,17 +112,7 @@ nav {
 }
 .main-img {
   position: relative;
-  top: 0;
-}
-.mockups {
-  top: -12rem;
-  background: url(/images/image-mockups.png) no-repeat center ;
-  background-size: cover;
-  width: 40rem;
-  height: 43rem;
-  position: absolute;
-  z-index: 200 !important;
-  right: -12.5rem;
+  top: 0 !important;
 }
 .mockups-bg {
   right: -22rem;
@@ -131,33 +121,85 @@ nav {
   position: absolute;
   width: 60rem;
   height: 44rem;
-  z-index: 150;
   top: -16rem;
+  overflow-y: visible !important;
+}
+.mockups {
+  overflow-y: visible !important;
+  z-index: 150;
+  content: '';
+  background: url(/images/image-mockups.png) no-repeat center ;
+  background-size: cover;
+  width: 40rem;
+  height: 45rem;
+  position: absolute;
+  top: -15rem;
+  right: -13rem;
+}
+
+/* duplicate */
+.main-container{
+  display: flex;
+  place-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  /* gap: 5rem; */
+  padding: 10rem 7rem;
+  position: relative;
+}
+.main-texts{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero-img{
+}
+.hero-img::before{
+  content: '';
+  background: url(/images/bg-intro-desktop.svg) no-repeat;
+  background-position: 0% 83%;
+  background-size: contain;
+  height: 110%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.hero-img::after{
+  content: '';
+  background: url(/images/image-mockups.png) no-repeat center ;
+  background-size: cover;
+  position: absolute;
 }
 
 /* about section */
 .sect-1-cont {
   background-color: var(--Light-Gray-Blue);
-  padding: 5rem 10rem;
+  padding: 5rem 6rem;
   gap: 3.5rem;
   display: flex;
-  align-items: center;
+  place-items: center;
   margin: auto !important;
   flex-direction: column;
 }
 .sect-1-combine{
   gap: 3.5rem;
-  align-items: center;
+  position: relative;
   place-items: center !important;
   display: flex;
   flex-direction: column;
 }
 .sect-1-text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  text-align: center;
+  text-align: left;
   place-content: left;
+  margin: 2rem 0;
 }
 .sect-1-lead{
   width: 35rem;
@@ -166,9 +208,9 @@ nav {
 }
 .sect-1-box-cont{
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
-  margin: auto;
+  margin: 11rem auto auto auto !important;
   place-content: center !important;
 }
 .sect-1-box{
@@ -183,7 +225,7 @@ nav {
 }
 .sect-1-head{
   color: var(--Dark-Blue);
-  font-size: 1.8rem;
+  font-size: 2rem !important;
 }
 .sect-1-box-head{
   font-size: 1.3rem;
@@ -199,10 +241,17 @@ nav {
 .sect-2-cont{
   display: flex;
   flex-direction: column;
-  padding: 7rem 3rem;
+  padding: 4rem 3rem;
   gap: 3.5rem;
   place-items: center;
   margin: 0 auto !important;
+}
+.sect-2-combine{
+  gap: 3.5rem;
+  position: relative;
+  place-items: center !important;
+  display: flex;
+  flex-direction: column;
 }
 .sect-2-art{
   position: relative;
@@ -210,6 +259,7 @@ nav {
   flex-wrap: wrap;
   place-content: center;
   gap: 2.3rem;
+  margin: 5rem auto auto auto !important;
 }
 .sect-2-card{
   display: flex;
@@ -217,6 +267,7 @@ nav {
   background-color: var(--Very-Light-Gray);
   border-radius: .6rem;
   width: 17rem;
+
 }
 .sect-2-img{
   border-radius: .6rem .6rem 0 0;
@@ -232,11 +283,13 @@ nav {
 }
 .sect-2-head{
   font-size: 1.5rem;
+  position: absolute;
+  left: 0;
 }
 .sect-2-head h2{
   color: var(--Dark-Blue);
-  line-height: 3rem;
   text-align: center;
+  line-height: 3rem;
 }
 .sect-2-text-head{
   font-size: 1.3rem;
@@ -276,7 +329,6 @@ h5{
   transition: .6s ease all;
 }
 .foot-links{
-  /* white-space: nowrap; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
